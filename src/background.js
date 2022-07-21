@@ -1,0 +1,1 @@
+console.log("Our extension is running.");let active_tab_id=0;chrome.tabs.onActivated.addListener((e=>{chrome.tabs.get(e.tabId,(t=>{active_tab_id=e.tabId,console.log(t.url),chrome.tabs.insertCSS(null,{file:"./styles.css"}),chrome.tabs.executeScript(null,{file:"./foreground.js"},(()=>console.log("Attempting to inject foreground.")))}))}));

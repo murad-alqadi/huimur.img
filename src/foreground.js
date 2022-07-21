@@ -1,0 +1,1 @@
+console.log("We have accessed the foreground.");const qsImg=document.querySelectorAll("img"),imgSrcs=[];for(let e=0;e<qsImg.length;e++)imgSrcs.push(qsImg[e].src);console.log(imgSrcs),chrome.storage.local.set({images:imgSrcs});
