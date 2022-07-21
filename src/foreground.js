@@ -9,14 +9,6 @@ chrome.storage.local.set({images:imgSrcs});
 //   res => console.log('React loaded images: ', res.message)
 // );
 
-chrome.runtime.onConnect.addListener((port) => {
-  console.assert(port.name === 'arrayFlow');
-  port.onMessage.addListener((req) => {
-    if(req.message == 'arrayRequest') {
-      port.postMessage({ type: 'array', data: imgSrcs })
-    }
-  });
-  return true;
-});
+
 
 module.exports = imgSrcs;
