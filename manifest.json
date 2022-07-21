@@ -1,6 +1,6 @@
 {
-  "name": "Chrome Extension",
-  "description": "by Murad and",
+  "name": "Our Project",
+  "description": "by Murad and Hui",
   "version": "0.1.0",
   "manifest_version": 2,
   "background": {
@@ -8,6 +8,12 @@
   },
   "options_page": "./options.html",
   "browser_action": {
-    "default_popup": "./popup.html"
-  }
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "storage",
+    "tabs"
+  ]
 }
