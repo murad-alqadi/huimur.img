@@ -1,8 +1,11 @@
 {
-  "name": "Image Downloader",
+  "name": "huimur.img",
   "description": "by Murad and Hui",
   "version": "0.1.0",
   "manifest_version": 2,
+  "icons": { "16": "./small.png",
+           "48": "./med.png",
+          "128": "./large.png" },
   "background": {
     "scripts": ["./background.js"]
   },
