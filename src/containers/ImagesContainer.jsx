@@ -10,14 +10,16 @@ class ImagesContainer extends Component {
     const boxes = [];
     console.log(this.props.imgs)
     this.props.imgs.forEach((el, i) => {
-      boxes.push(
-      <ImageBoxes 
-        src={el}
-        id={i}
-        key={i}
-        unmountMe={this.props.unmountMe}
-      />
-      );
+      if(el && el !== '') {
+        boxes.push(
+          <ImageBoxes 
+            src={el}
+            id={i}
+            retrieved={this.props.retrieved}
+            key={i}
+          />
+        );
+        }
     });
     return(
       <div>
